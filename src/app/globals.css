@@ -27,3 +27,14 @@ body {
 }
 
 
+
+
+::-moz-selection { /* Code for Firefox */
+    color: rgb(255, 255, 123);
+    background: rgba(221, 162, 255, 0.474);
+  }
+  
+  ::selection {
+    color: rgb(255, 255, 123);
+    background: rgba(221, 162, 255, 0.474);
+  }
