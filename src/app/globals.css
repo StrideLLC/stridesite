@@ -38,3 +38,23 @@ body {
     color: rgb(255, 255, 123);
     background: rgba(221, 162, 255, 0.474);
   }
+
+
+@media (max-width: 640px) {
+  .text-4xl {
+    font-size: 2rem;
+  }
+  
+  .text-2xl {
+    font-size: 1.5rem;
+    padding-left: 30px;
+  }
+  
+  .pl-20 {
+    padding-left: 10px;
+  }
+  
+  .pl-4 {
+    padding-left: 15px;
+  }
+}
