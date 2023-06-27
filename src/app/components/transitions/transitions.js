@@ -1,11 +1,8 @@
-'use client';
-
-
-import { motion } from "framer-motion";
+import { MotionDiv } from "../../../../lib/motion";
 
 export async function FadeInWhenVisible({ children }) {
     return (
-      <motion.div
+      <MotionDiv
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -16,14 +13,26 @@ export async function FadeInWhenVisible({ children }) {
         }}
       >
         {children}
-      </motion.div>
+      </MotionDiv>
     );
+  }
+
+  export async function HoverScaleRotate({ children }) {
+    return(
+      <MotionDiv
+        whileHover={{ scale: 1.1 }}
+        transition={{ type: "spring", stiffness: 300, damping: 10}}
+      >
+        {children}
+      </MotionDiv>
+
+    )
   }
 
 
 export async function GlowFadeIn({ children }) {
   return(
-    <motion.div
+    <MotionDiv
         className="rounded-xl bg-transparent"
         initial="hidden"
         whileInView="visible"
@@ -35,6 +44,6 @@ export async function GlowFadeIn({ children }) {
         }}
       >
         {children}
-      </motion.div>
+      </MotionDiv>
   )
 }
