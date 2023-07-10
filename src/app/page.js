@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <section className="first-section">
       <div className="App">
-        <div className="pl-8">
+        <div className="pl-8 pt-8">
           <tiles.logoImage />
         </div>
         <main className="w-full max-w-[1400px] gap-y-5 gap-x-5 grid grid-cols-8 py-6 mx-auto -mt-20">
