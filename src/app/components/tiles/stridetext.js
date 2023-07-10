@@ -1,28 +1,17 @@
 "use client";
 
 import { Phrase, Char } from "animatedtxt";
+import { MotionDiv } from "@/lib/motion";
 
-import * as transitions from "./transitions/transitions";
+import * as transitions from "../transitions/transitions";
 
-import Image from "next/image";
-
-export async function logoImage() {
+export async function StrideText() {
   return (
-    <a href="/">
-      <Image
-        src="/stridelogo.png"
-        alt="Stride Logo"
-        width={130}
-        height={130}
-        className="opacity-50"
-      />
-    </a>
-  );
-}
-export async function welcomeTile() {
-  return (
-    <transitions.GlowFadeIn>
-      <div className="bg-purple-900/10 w-full h-full rounded-xl py-10 flex flex-wrap">
+    <MotionDiv {...transitions.FadeInWhenVisible}>
+      <MotionDiv
+        {...transitions.GlowFadeIn}
+        className="bg-purple-900/10 w-full h-full rounded-xl py-10 flex flex-wrap"
+      >
         <div className="text-white/70 tracking-widest">
           <div className="Stride-Logo pl-20">
             <Phrase
@@ -94,37 +83,7 @@ export async function welcomeTile() {
             </div>
           </div>
         </div>
-      </div>
-    </transitions.GlowFadeIn>
-  );
-}
-
-export async function WIP() {
-  return (
-    <div className="bg-purple-900/10 w-full h-full rounded-xl py-10 justify-center items-center flex flex-wrap">
-      <div className="text-white/70 tracking-widest">
-        <p className="text-2xl"> This page is currently under construction.</p>
-      </div>
-    </div>
-  );
-}
-
-export async function aboutTile() {
-  return (
-    <div className="bg-purple-900/10 w-full h-full rounded-3xl py-8 px-28 justify-center items-center flex flex-wrap">
-      <div className="text-white/70 tracking-widest">
-        <p className="text-4xl text-bold text-center">
-          Let us assist you in growing your reselling business to levels you
-          never imagined possible.
-        </p>
-      </div>
-      <div className="mb-4 mt-12">
-        <transitions.HoverScaleRotate>
-          <button className="text-3xl text-extrabold text-white/70 text-center rounded-full bg-purple-400/50 px-20 py-4">
-            Learn More
-          </button>
-        </transitions.HoverScaleRotate>
-      </div>
-    </div>
+      </MotionDiv>
+    </MotionDiv>
   );
 }

@@ -2,59 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-  width: 100%;
-  height:100%;
-}
-
+html,
 body {
-  background: linear-gradient(-45deg, #000000, #120023, #290044, #3a005a);
-
-    background-size: 400% 400%;
-    animation: gradient 30s ease infinite;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-
-
-
-::-moz-selection { /* Code for Firefox */
-    color: rgb(255, 255, 123);
-    background: rgba(221, 162, 255, 0.474);
-  }
+  width: 100%;
+  height: 100%;
+  background-color: rgb(20, 0, 35);
   
-  ::selection {
-    color: rgb(255, 255, 123);
-    background: rgba(221, 162, 255, 0.474);
-  }
+}
+/*#000000, #120023, #290044, #3a005a*/
 
+/* @keyframes firstGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+
+.second-section {
+  background: linear-gradient(45deg, #ffffff, #efd0ff);
+  background-size: 400% 400%;
+  animation: secondGradient 30s ease infinite;
+}
+
+@keyframes secondGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: rgb(255, 255, 123);
+  background: rgba(221, 162, 255, 0.474);
+}
+
+::selection {
+  color: rgb(255, 255, 123);
+  background: rgba(221, 162, 255, 0.474);
+}
 
 @media (max-width: 640px) {
   .text-4xl {
     font-size: 2rem;
   }
-  
+
   .text-2xl {
     font-size: 1.5rem;
     padding-left: 30px;
   }
-  
+
   .pl-20 {
     padding-left: 10px;
   }
-  
+
   .pl-4 {
     padding-left: 15px;
   }
 }
+
