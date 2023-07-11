@@ -9,6 +9,11 @@ export const scrollScript = {
             const y = 1 + (window.scrollY || window.pageYOffset) / 1000;
             const [r, g, b] = [red*y, green*y, blue*y].map(Math.round);
             section1.style.backgroundColor = 'rgb(' + r + ', ' + g + ', ' + b + ')';
+            if(window.scrollY > 10){
+              document.querySelector('.backtotop').style.display = 'block';
+            }else{
+              document.querySelector('.backtotop').style.display = 'none';
+            }
           });
         `,
       }

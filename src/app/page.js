@@ -2,6 +2,8 @@ import React from "react";
 import * as tiles from "./components/tiles/tiles.js";
 import { scrollScript } from "@/lib/scrollscript.js";
 
+import BackToTop from "./components/buttons/backtotop.js";
+
 const Home = () => {
 
   return (
@@ -32,8 +34,8 @@ const Home = () => {
             </div>
           </main>
         </div>
-
         <script {...scrollScript} />
+        <BackToTop />
       </section>
     </>
   );
