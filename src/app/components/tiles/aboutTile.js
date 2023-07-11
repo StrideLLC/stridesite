@@ -13,15 +13,15 @@ export default async function AboutTileClient({ targetSelector }) {
           targetElement.scrollIntoView({ behavior: 'smooth' });
         }
         else{
-            alert('BALLLLLS')
+            alert('error - please refresh')
         }
       };
 
 
   return (
     <MotionDiv {...transitions.FadeInWhenVisible} className="bg-purple-900/10 w-full h-full rounded-3xl py-8 px-28 justify-center items-center flex flex-wrap">
-      <div className="text-white/70 tracking-widest">
-        <p className="text-4xl font-semibold text-center">
+      <div className="text-white/50 ">
+        <p className="text-4xl font-normal text-center">
           Let us assist you in growing your reselling business to levels you never imagined possible.
         </p>
       </div>

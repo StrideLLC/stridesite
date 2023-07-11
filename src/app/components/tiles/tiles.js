@@ -4,19 +4,23 @@ import { StrideText } from "./stridetext";
 import { MotionDiv } from "@/lib/motion";
 import Image from "next/image";
 
+import Link from "next/link";
+
 import AboutTileClient from "./aboutTile";
 
 export async function logoImage() {
   return (
-    <a href="/">
+    <MotionDiv initial={{opacity: 0, x: -100}} whileInView={{opacity: 1, x: 0}} viewport={{once: true}} transition={{type: 'spring', delay: 0, stiffness: 200, damping: 10}} >
+    <Link href="/">
       <Image
-        src="/stridelogo.png"
+        src="/stridelogo123.png"
         alt="Stride Logo"
         width={130}
         height={130}
         className="opacity-50"
       />
-    </a>
+    </Link>
+    </MotionDiv>
   );
 }
 
