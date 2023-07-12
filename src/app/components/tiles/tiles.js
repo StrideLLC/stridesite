@@ -1,8 +1,10 @@
 
 import * as transitions from "../transitions/transitions";
 import { StrideText, StrideTextMobile } from "./stridetext";
+import { NavBarDesktop } from "./navigation";
 import { MotionDiv } from "@/lib/motion";
 import Image from "next/image";
+
 
 import Link from "next/link";
 
@@ -24,6 +26,11 @@ export async function logoImage() {
   );
 }
 
+export async function NavBar(){
+  return(
+      <NavBarDesktop />
+  )
+}
 
 export async function welcomeTile(){
   return(

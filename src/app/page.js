@@ -5,13 +5,17 @@ import { scrollScript } from "@/lib/scrollscript.js";
 import BackToTop from "./components/buttons/backtotop.js";
 
 const Home = () => {
-
   return (
     <>
       <section className="first-section">
         <div className="App">
-          <div className="pl-8 pt-8">
-            <tiles.logoImage />
+          <div className="pl-8 pt-8 flex">
+            <div className="flex-grow">
+              <tiles.logoImage />
+            </div>
+            <div className="justify-center items-center flex pr-12">
+              <tiles.NavBar />
+            </div>
           </div>
           <main className="w-full max-w-[1400px] md:gap-y-5 gap-y-1 gap-x-5 grid grid-cols-8 py-6 mx-auto -mt-20">
             <div className="ghost col-span-0 md:col-span-2"></div>
