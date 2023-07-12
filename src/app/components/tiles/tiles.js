@@ -1,6 +1,6 @@
 
 import * as transitions from "../transitions/transitions";
-import { StrideText } from "./stridetext";
+import { StrideText, StrideTextMobile } from "./stridetext";
 import { MotionDiv } from "@/lib/motion";
 import Image from "next/image";
 
@@ -10,13 +10,13 @@ import AboutTileClient from "./aboutTile";
 
 export async function logoImage() {
   return (
-    <MotionDiv initial={{opacity: 0, x: -100}} whileInView={{opacity: 1, x: 0}} viewport={{once: true}} transition={{type: 'spring', delay: 0, stiffness: 200, damping: 10}} >
+    <MotionDiv className="md:w-[100px] h-[100px] w-[75px] h-[75px] md:ml-0 -ml-4" {...transitions.HoverScaleRotate} initial={{opacity: 0, x: -100, rotate: -40}} whileInView={{opacity: 1, x: 0, rotate: 0}} viewport={{once: true}} transition={{type: 'spring', delay: 0, stiffness: 200, damping: 10}} >
     <Link href="/">
       <Image
         src="/stridelogo123.png"
         alt="Stride Logo"
-        width={130}
-        height={130}
+        width={100}
+        height={100}
         className="opacity-50"
       />
     </Link>
@@ -24,10 +24,17 @@ export async function logoImage() {
   );
 }
 
+
 export async function welcomeTile(){
   return(
     <StrideText />
-  )
+  );
+}
+
+export async function WelcomeTileMobile() {
+  return (
+    <StrideTextMobile />
+  );
 }
 
 export async function WIP() {

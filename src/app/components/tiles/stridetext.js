@@ -10,10 +10,10 @@ export async function StrideText() {
     <MotionDiv {...transitions.FadeInWhenVisible}>
       <MotionDiv
         {...transitions.GlowFadeIn}
-        className="bg-purple-900/10 w-full h-full rounded-xl py-10 flex flex-wrap"
+        className="bg-purple-900/10 w-full h-full rounded-xl py-10 hidden md:flex flex-wrap justify-center items-center"
       >
-        <div className="text-white/70 tracking-widest">
-          <div className="Stride-Logo pl-20">
+        <div className="">
+          <div className="Stride-Logo flex justify-center items-center">
             <Phrase
               margin={10}
               size={70}
@@ -30,10 +30,10 @@ export async function StrideText() {
               <Char char="E" />
             </Phrase>
           </div>
-          <div className="flex pl-20 pt-8">
+          <div className="flex pt-8">
             <Phrase
               margin={5}
-              size={30}
+              size={20}
               cubicBezier={[0.68, 0.04, 0.45, 0.98]}
               color="#ffffff"
               delay={1.2}
@@ -50,7 +50,7 @@ export async function StrideText() {
             <div className="pl-4">
               <Phrase
                 margin={5}
-                size={30}
+                size={20}
                 cubicBezier={[0.68, 0.04, 0.45, 0.98]}
                 color="#ffffff"
                 font="basic-thin"
@@ -65,7 +65,7 @@ export async function StrideText() {
             <div className="pl-4">
               <Phrase
                 margin={5}
-                size={30}
+                size={20}
                 cubicBezier={[0.68, 0.04, 0.45, 0.98]}
                 color="#ffffff"
                 font="basic-thin"
@@ -86,4 +86,35 @@ export async function StrideText() {
       </MotionDiv>
     </MotionDiv>
   );
+}
+
+
+export function StrideTextMobile() {
+  return(
+    <MotionDiv className="" {...transitions.FadeInWhenVisible}>
+      <MotionDiv
+        {...transitions.GlowFadeIn}
+        className="md:hidden bg-purple-900/10 w-full h-full rounded-xl py-10 flex flex-wrap justify-center items-center mt-16"
+        >
+          <div className="Stride-Logo flex justify-center items-center">
+            <Phrase
+              margin={10}
+              size={35}
+              cubicBezier={[0.68, 0.04, 0.45, 0.98]}
+              color="#FFFFFF"
+              delay={0.5}
+              font="basic-medium"
+            >
+              <Char char="S" />
+              <Char char="T" />
+              <Char char="R" />
+              <Char char="I" />
+              <Char char="D" />
+              <Char char="E" />
+            </Phrase>
+            
+          </div>
+        </MotionDiv>
+    </MotionDiv>
+  )
 }

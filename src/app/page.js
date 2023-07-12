@@ -13,12 +13,13 @@ const Home = () => {
           <div className="pl-8 pt-8">
             <tiles.logoImage />
           </div>
-          <main className="w-full max-w-[1400px] gap-y-5 gap-x-5 grid grid-cols-8 py-6 mx-auto -mt-20">
-            <div className="ghost col-span-2"></div>
-            <div className="col-span-4">
+          <main className="w-full max-w-[1400px] md:gap-y-5 gap-y-1 gap-x-5 grid grid-cols-8 py-6 mx-auto -mt-20">
+            <div className="ghost col-span-0 md:col-span-2"></div>
+            <div className="col-span-6 md:col-span-4">
               <tiles.welcomeTile />
+              <tiles.WelcomeTileMobile />
             </div>
-            <div className="ghost col-span-2"></div>
+            <div className="ghost col-span-0 md:col-span-2"></div>
             <div className="ghost col-span-1"></div>
             <div className="col-span-6 pt-20">
               <tiles.aboutTile targetSelector={`.wip`} />
