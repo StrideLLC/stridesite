@@ -8,6 +8,7 @@ export default function BackToTop() {
       top: 0,
       behavior: "smooth",
     });
+    history.pushState("", document.title, window.location.pathname + window.location.search);
   };
 
   return (

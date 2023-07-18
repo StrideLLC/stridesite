@@ -28,7 +28,7 @@ const Home = () => {
               <div className="mt-40 ghost col-span-8"></div>
               <div className="mt-40 ghost col-span-8"></div>
               <div className="mt-40 ghost col-span-8"></div>
-              <div className="mt-80 col-span-8 wip">
+              <div className="mt-80 col-span-8 wip about discord contact tools">
                 <tiles.WIP />
               </div>
             </main>

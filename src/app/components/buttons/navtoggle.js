@@ -25,24 +25,29 @@ export const MenuToggle = ({ toggle }) => {
       }
     `;
     window.eval(script);
+
   };
 
   const nav = [
     {
       name: "About",
       link: "#about",
+      target: ".about",
     },
     {
       name: "Tools",
-      link: "#projects",
+      link: "#tools",
+      target: ".tools",
     },
     {
       name: "Contact",
       link: "#contact",
+      target: ".contact",
     },
     {
       name: "Discord",
       link: "#discord",
+      target: ".discord",
     }
   ];
 
@@ -127,6 +132,7 @@ export const MenuToggle = ({ toggle }) => {
                       <motion.li
                         className="pt-16"
                         key={index}
+                        onClick={toggleMenu}
                         variants={{
                           initial: {
                             opacity: 0,
