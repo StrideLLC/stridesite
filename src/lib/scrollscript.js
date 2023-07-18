@@ -1,6 +1,6 @@
 export const scrollScript = {
-    dangerouslySetInnerHTML: {
-        __html: `
+  dangerouslySetInnerHTML: {
+    __html: `
           window.addEventListener('scroll', function() {
             const red = 20;
             const green = 0;
@@ -15,6 +15,22 @@ export const scrollScript = {
               document.querySelector('.backtotop').style.display = 'none';
             }
           });
+          const appDiv = document.querySelector('.App');
+          const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+              if (mutation.attributeName === "class") {
+                const currentClassValue = appDiv.getAttribute("class");
+                if (currentClassValue.includes("blur")) {
+                  appDiv.style.filter = "blur(5px)";
+                } else {
+                  appDiv.style.filter = "none";
+                }
+              }
+            });
+          });
+          observer.observe(appDiv, {
+            attributes: true
+          });
         `,
-      }
-}
+  },
+};

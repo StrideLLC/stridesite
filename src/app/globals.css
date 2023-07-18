@@ -43,6 +43,10 @@ body {
   }
 }
 
+.App {
+  transition: filter 0.6s ease-in-out;
+}
+
 ::-moz-selection {
   /* Code for Firefox */
   color: rgb(255, 255, 123);

@@ -16,6 +16,15 @@ export const MenuToggle = ({ toggle }) => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+    const script = `
+      const appDiv = document.querySelector('.App');
+      if (appDiv.classList.contains('blur')) {
+        appDiv.classList.remove('blur');
+      } else {
+        appDiv.classList.add('blur');
+      }
+    `;
+    window.eval(script);
   };
 
   const nav = [
@@ -24,23 +33,31 @@ export const MenuToggle = ({ toggle }) => {
       link: "#about",
     },
     {
-      name: "tools",
+      name: "Tools",
       link: "#projects",
     },
+    {
+      name: "Contact",
+      link: "#contact",
+    },
+    {
+      name: "Discord",
+      link: "#discord",
+    }
   ];
 
   return (
     <LayoutGroup>
       <AnimatePresence>
         <motion.div
-          className="relative "
+          className="flex w-full h-full justify-end"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ type: "spring", stiffness: 300, damping: 10 }}
         >
           <motion.button
-            className="z-20 absolute top-1/2 left-0 transform -translate-y-1/2 scale-[1.5]"
+            className="z-20 absolute transform -translate-y-1/2 scale-[1.5] pt-20 pr-8"
             onClick={toggleMenu}
           >
             <motion.svg
@@ -74,19 +91,19 @@ export const MenuToggle = ({ toggle }) => {
               />
             </motion.svg>
           </motion.button>
-          <div className="absolute z-10 ">
+          <div className="z-10 w-full h-full relative">
             <AnimatePresence>
               {isOpen && (
                 <motion.div
-                  className="md:bg-purple-400/50 bg-purple-500 flex py-12 md:w-52 md:h-48 w-screen -ml-[20.5rem] h-56  md:-ml-44 md:-mt-6  -mt-8 rounded-xl"
+                  className="bg-[#1b032d] flex px-4 w-full py-8 h-full rounded-xl absolute"
                   initial="initial"
                   animate="animate"
                   exit="exit"
                   variants={{
-                    initial: { opacity: 0, y: -100, filter: "blur(10px)" },
+                    initial: { opacity: 0, transform: "translatex(100%)", filter: "blur(10px)" },
                     animate: {
                       opacity: 1,
-                      y: 0,
+                      transform: "translatex(0%)",
                       filter: "blur(0px)",
                       transition: {
                         when: "beforeChildren",
@@ -95,8 +112,8 @@ export const MenuToggle = ({ toggle }) => {
                     },
                     exit: {
                       opacity: 0,
-                      y: -100,
                       filter: "blur(10px)",
+                      transform: "translatex(100%)",
                       transition: {
                         when: "afterChildren",
                         staggerChildren: 0.1,
@@ -105,9 +122,10 @@ export const MenuToggle = ({ toggle }) => {
                     },
                   }}
                 >
-                  <ul className="text-2xl ml-4 font-bold">
+                  <ul className="text-5xl pl-4 font-bold tracking-wide md:pt-20 pt-8">
                     {nav.map((item, index) => (
                       <motion.li
+                        className="pt-16"
                         key={index}
                         variants={{
                           initial: {
