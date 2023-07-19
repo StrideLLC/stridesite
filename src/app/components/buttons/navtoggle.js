@@ -31,8 +31,10 @@ export const MenuToggle = ({ toggle }) => {
         appDiv.classList.add('blur');
       }
       if(backtotop.classList.contains('isOpen')) {
-        backtotop.classList.remove('isOpen');
-        backtotop.style.opacity = '1';
+        if(window.scrollY != 0){
+          backtotop.classList.remove('isOpen');
+          backtotop.style.opacity = '1';
+        }
       } else {
         backtotop.classList.add('isOpen');
         backtotop.style.opacity = '0';

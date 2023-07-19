@@ -13,7 +13,7 @@ const Home = () => {
             <div className="pl-8 pt-8">
               <tiles.logoImage />
             </div>
-            <main className="flex-grow w-full max-w-[1400px] md:gap-y-5 gap-y-1 gap-x-5 grid grid-cols-8 py-6 mx-auto -mt-20">
+            <main className="flex-grow w-full xl:max-w-[2000px] max-w-[1400px] md:gap-y-5 gap-y-1 gap-x-5 grid grid-cols-8 py-6 mx-auto -mt-20">
               <div className="ghost col-span-0 md:col-span-2"></div>
               <div className="col-span-6 md:col-span-4">
                 <tiles.welcomeTile />
@@ -25,7 +25,6 @@ const Home = () => {
                 <tiles.aboutTile targetSelector={`.wip`} />
               </div>
               <div className="ghost col-span-1"></div>
-              <div className="mt-96 ghost col-span-8"></div>
               <div className="mt-80 col-span-8 wip about">
                 <tiles.AboutUs />
               </div>
