@@ -18,10 +18,24 @@ export const MenuToggle = ({ toggle }) => {
     setIsOpen(!isOpen);
     const script = `
       const appDiv = document.querySelector('.App');
+      const backtotop = document.querySelector('.backtotop');
+      const navBar = document.querySelector('.navBar');
+      if (navBar.classList.contains('isOpen')) {
+        navBar.classList.remove('isOpen');
+      } else {
+        navBar.classList.add('isOpen');
+      }
       if (appDiv.classList.contains('blur')) {
         appDiv.classList.remove('blur');
       } else {
         appDiv.classList.add('blur');
+      }
+      if(backtotop.classList.contains('isOpen')) {
+        backtotop.classList.remove('isOpen');
+        backtotop.style.opacity = '1';
+      } else {
+        backtotop.classList.add('isOpen');
+        backtotop.style.opacity = '0';
       }
     `;
     window.eval(script);
@@ -55,7 +69,7 @@ export const MenuToggle = ({ toggle }) => {
     <LayoutGroup>
       <AnimatePresence>
         <motion.div
-          className="flex w-full h-full justify-end"
+          className="flex w-full h-full justify-end navBar"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -127,10 +141,10 @@ export const MenuToggle = ({ toggle }) => {
                     },
                   }}
                 >
-                  <ul className="text-5xl pl-4 font-bold tracking-wide md:pt-20 pt-8">
+                  <ul className="text-5xl pl-4 font-bold tracking-wide md:mt-20 mt-8">
                     {nav.map((item, index) => (
                       <motion.li
-                        className="pt-16"
+                        className="mt-16"
                         key={index}
                         onClick={toggleMenu}
                         variants={{

@@ -60,3 +60,22 @@ export async function aboutTile({ targetSelector }) {
   )
 }
 
+export async function servicesTile() {
+  return (
+    <div className="bg-purple-900/10 w-full h-full rounded-xl py-10 justify-center items-center flex flex-wrap">
+      <div className="text-white/70 tracking-widest">
+        <p className="text-2xl"> Services</p>
+      </div>
+    </div>
+  );
+}
+
+export async function AboutUs(){
+  return(
+    <MotionDiv initial={{opacity: 0}} whileInView={{opacity: 1}} viewport={{once: false}} className="bg-purple-900/10 w-full h-full rounded-xl py-10 justify-center items-center flex flex-wrap">
+      <div className="text-white/70 tracking-widest">
+        <p className="text-2xl"> About</p>
+      </div>
+    </MotionDiv>
+  )
+}
