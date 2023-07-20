@@ -1,44 +1,10 @@
-'use client'
-import * as Motion from './motion'
-import { useRef } from 'react';
-import { useInView } from 'framer-motion';
-export function Shoesvg() {
-	const ref = useRef(null);
-	const isInView = useInView(ref, { once: true });
+export function shoesvg(){
+return(
 
-	const shoe = {
-		hidden: {
-		  pathLength: 0,
-		  fill: "rgba(0, 0, 0, 0)"
-		},
-		visible: {
-		  pathLength: 1,
-		  fill: "rgba(0, 0, 0, 1)"
-		}
-	  };
-  return (
-    <Motion.MotionDiv initial={{opacity: 0, transform: "scale(0.8)" }} whileInView={{opacity: 1, transform: "scale(1)"}} transition={{type:'spring', stiffness: 100, damping: 10}} viewport={{once: false}}>
-      <Motion.SVG
-        version="1.1"
-        id="Layer_1"
-        xmlns="http://www.w3.org/2000/svg"
-        xmlnsXlink="http://www.w3.org/1999/xlink"
-        x="0px"
-        y="0px"
-        width="100%"
-        viewBox="0 0 976 608"
-        xmlSpace="preserve"
-		ref={ref}
-      >
-        <Motion.Path
-			animate={isInView ? "visible" : "hidden"}
-			variants={shoe}
-			transition={{ pathLength: {duration: 15, ease: "easeInOut"}, opacity: {duration: 1, ease: "easeInOut"}}}
-			fill="#000000"
-			opacity="1.000000"
-			stroke="#8107fa"
-			strokeWidth="10"
-          d="
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="100%" viewBox="0 0 976 608" xml:space="preserve">
+<path fill="#000000" opacity="1.000000" stroke="none" 
+	d="
 M1.000000,502.468658 
 	C5.210410,481.235504 7.351254,460.395111 6.266791,439.087555 
 	C4.443658,403.266449 5.980246,367.579620 13.961456,332.397552 
@@ -342,17 +308,9 @@ M541.635559,307.202820
 	C529.171143,303.663025 525.265320,308.094116 521.164978,312.958313 
 	C527.892395,317.411285 533.893127,321.383301 540.325684,325.641113 
 	C542.402100,319.305450 541.411316,313.638184 541.635559,307.202820 
-z"
-        />
-        <Motion.Path
-	      animate={isInView ? "visible" : "hidden"}
-		  variants={shoe}
-		  transition={{ default: {duration: 1.5, ease: "easeInOut"}, pathLength: {delay: 4.75, duration: 2}}}
-          fill="#000000"
-          opacity="1.000000"
-		  stroke="#8107fa"
-		  strokeWidth="7"
-          d="
+z"/>
+<path fill="#000000" opacity="1.000000" stroke="none" 
+	d="
 M266.625671,180.582977 
 	C258.073273,192.415939 248.253113,202.556778 237.132797,211.416809 
 	C224.670090,221.346420 209.682236,225.471298 194.612473,229.007736 
@@ -368,9 +326,7 @@ M266.625671,180.582977
 	C253.801193,153.973206 254.322021,157.366470 254.833618,161.480972 
 	C266.283356,156.564590 275.079132,148.019974 286.819458,144.213120 
 	C282.326172,157.512299 274.774628,169.005936 266.625671,180.582977 
-z"
-        />
-      </Motion.SVG>
-    </Motion.MotionDiv>
-  );
+z"/>
+</svg>
+)
 }

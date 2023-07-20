@@ -10,7 +10,7 @@ import { Shoesvg } from "@/lib/shoesvg";
 export async function logoImage() {
   return (
     <Motion.MotionDiv
-      className="md:w-[100px] h-[100px] w-[75px] h-[75px] md:ml-0 -ml-4"
+      className="md:w-[100px] h-[100px] w-[75px] h-[75px] md:ml-0 -ml-4 z-60"
       {...transitions.HoverScaleRotate}
       initial={{ opacity: 0, x: -100, rotate: -40 }}
       whileInView={{ opacity: 1, x: 0, rotate: 0 }}
@@ -52,8 +52,8 @@ export async function WIP() {
   );
 }
 
-export async function aboutTile({ targetSelector }) {
-  return <AboutTileClient targetSelector={targetSelector} />;
+export async function aboutTile() {
+  return <AboutTileClient />;
 }
 
 export async function servicesTile() {
@@ -72,18 +72,26 @@ export async function AboutUs() {
       initial={{ opacity: 1 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: false }}
-      className="bg-purple-900/50 mx-auto w-full h-full rounded-xl flex flex-wrap"
+      className="bg-purple-900/50 mx-auto w-full h-full md:rounded-xl flex flex-wrap"
     >
-      <div className="text-white/70 tracking-wide mt-8 mx-20 w-full h-full grid grid-cols-4 gx-auto">
-        <div className="col-span-2">
+      <div className="text-white/70 tracking-wide py-4 px-8 md:py-8 md:px-20 w-full h-full grid md:grid-cols-3 grid-cols-1 ">
+        <div className="md:col-span-2 col-span-1 flex flex-wrap md:justify-normal md:items-normal md:text-left items-center justify-center text-center">
           <Motion.P
-            initial={{opacity: 0, y: -10}} whileInView={{opacity: 1, y: 0}} viewport={{once: false}}
-            className="text-3xl tracking-widest font-bold text-zinc-300"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false }}
+            className="md:text-3xl text-xl tracking-widest font-bold text-zinc-300"
             style={{ textShadow: "8px 8px 10px #210342" }}
           >
             Who are we?
           </Motion.P>
-          <Motion.P initial={{opacity: 0, y: -10}} whileInView={{opacity: 1, y: 0}} viewport={{once: false}} className="text-2xl mt-8 mb-8">
+          <Motion.P
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: false }}
+            transition={{ delay: 0.1 }}
+            className="md:text-2xl text-sm md:mt-8 mt-4 mb-8"
+          >
             At Stride, we believe in the power of progress and the journey of
             growth. Our motto, "Elevate Your Business," reflects our commitment
             to empowering entrepreneurs, resellers, and creatives to reach new
@@ -92,10 +100,9 @@ export async function AboutUs() {
             to succeed in a dynamic marketplace.
           </Motion.P>
         </div>
-        <div className="col-span-1 ghost" />
-        <Motion.MotionDiv initial={{opacity: 0, x: 20}} whileInView={{opacity: 1, x: 0}} transition={{type:'spring', delayChildren: 2, stiffness: 200, damping: 10, duration: 1, delay: 0.5}} viewport={{once: false}} className="flex items-center justify-center">
-          <Shoesvg />
-        </Motion.MotionDiv>
+          <Motion.MotionDiv className="md:w-full md:h-full w-2/3 h-2/3 pt-4 md:pt-0 flex items-center md:ml-8 col-span-1 justify-center mx-auto">
+            <Shoesvg />
+          </Motion.MotionDiv>
       </div>
     </Motion.MotionDiv>
   );
