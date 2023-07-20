@@ -34,18 +34,7 @@ export const scrollScript = {
             attributes: true
           });
 
-          function handleHashChange() {
-            const hash = location.hash.replace('#', '')
-            const target = document.querySelector('.' + hash)
-            if (target) {
-              target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start',
-              })
-            }
-          }
-          window.onhashchange = handleHashChange;
-          
+         
         `,
   },
 };

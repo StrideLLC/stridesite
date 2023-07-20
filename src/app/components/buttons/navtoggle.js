@@ -20,6 +20,7 @@ export const MenuToggle = ({ toggle }) => {
       const appDiv = document.querySelector('.App');
       const backtotop = document.querySelector('.backtotop');
       const navBar = document.querySelector('.navBar');
+      const navContainer = document.querySelector('.navContainer');
       if (navBar.classList.contains('isOpen')) {
         navBar.classList.remove('isOpen');
       } else {
@@ -39,6 +40,15 @@ export const MenuToggle = ({ toggle }) => {
         backtotop.classList.add('isOpen');
         backtotop.style.opacity = '0';
       }
+      // Check if the width of the screen is less than or equal to 768px
+    if(window.innerWidth <= 768){
+      // If it is, then adjust the width of the navContainer according to the isOpen state
+      if(navContainer.classList.contains('z-20')) {
+        navContainer.classList.remove('z-20');
+      } else {
+        navContainer.classList.add('z-20');
+      }
+    }
     `;
     window.eval(script);
 
@@ -78,7 +88,7 @@ export const MenuToggle = ({ toggle }) => {
           transition={{ type: "spring", stiffness: 300, damping: 10 }}
         >
           <motion.button
-            className="z-20 absolute transform -translate-y-1/2 scale-[1.5] pt-20 pr-8"
+            className="z-20 absolute transform -translate-y-1/2 scale-[1.5] mt-20 mr-10"
             onClick={toggleMenu}
           >
             <motion.svg

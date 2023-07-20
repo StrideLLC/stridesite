@@ -7,8 +7,8 @@ const Home = () => {
 
   return (
     <>
-      <section className="first-section relative">
-        <div className="App flex flex-row h-full ">
+]      <section className="first-section relative">
+        <div className="App flex flex-row h-full">
           <div className="flex flex-col w-full">
             <div className="pl-8 pt-8">
               <tiles.logoImage />
@@ -22,16 +22,16 @@ const Home = () => {
               <div className="ghost col-span-0 md:col-span-2"></div>
               <div className="ghost col-span-1"></div>
               <div className="col-span-6 pt-20">
-                <tiles.aboutTile targetSelector={`.wip`} />
+                <tiles.aboutTile/>
               </div>
               <div className="ghost col-span-1"></div>
-              <div className="mt-80 col-span-8 wip about">
+              <div id='about' className="md:mt-80 mt-40 col-span-8 about">
                 <tiles.AboutUs />
               </div>
             </main>
           </div>
         </div>
-        <div className="fixed right-0 top-0 h-full md:w-80 w-screen">
+        <div className="fixed right-0 top-0 h-full md:w-80 w-screen z-0 navContainer">
           <tiles.NavBar />
         </div>
         <BackToTop />
