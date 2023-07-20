@@ -58,22 +58,18 @@ export const MenuToggle = ({ toggle }) => {
     {
       name: "About",
       link: "#about",
-      target: ".about",
+    },
+    {
+      name: "Services",
+      link: "#services",
     },
     {
       name: "Tools",
       link: "#tools",
-      target: ".tools",
-    },
-    {
-      name: "Contact",
-      link: "#contact",
-      target: ".contact",
     },
     {
       name: "Discord",
       link: "#discord",
-      target: ".discord",
     }
   ];
 
@@ -88,7 +84,7 @@ export const MenuToggle = ({ toggle }) => {
           transition={{ type: "spring", stiffness: 300, damping: 10 }}
         >
           <motion.button
-            className="z-20 absolute transform -translate-y-1/2 scale-[1.5] mt-20 mr-10"
+            className="z-20 absolute transform -translate-y-1/2 scale-[1.5] 2xl:scale-[3] mt-10 2xl:mt-28 2xl:mr-20 mr-10"
             onClick={toggleMenu}
           >
             <motion.svg

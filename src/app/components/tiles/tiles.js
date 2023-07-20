@@ -1,5 +1,5 @@
 import * as transitions from "../transitions/transitions";
-import { StrideText, StrideTextMobile } from "./stridetext";
+import { StrideText, StrideTextMobile, XLStrideText } from "./stridetext";
 import { NavBarDesktop } from "./navigation";
 import * as Motion from "@/lib/motion";
 import Image from "next/image";
@@ -23,7 +23,7 @@ export async function logoImage() {
           alt="Stride Logo"
           width={100}
           height={100}
-          className="opacity-50"
+          className="opacity-50 2xl:scale-[1.5] 2xl:mt-8 2xl:ml-8"
         />
       </Link>
     </Motion.MotionDiv>
@@ -40,6 +40,10 @@ export async function welcomeTile() {
 
 export async function WelcomeTileMobile() {
   return <StrideTextMobile />;
+}
+
+export async function WelcomeTileXL(){
+  return <XLStrideText />
 }
 
 export async function WIP() {
@@ -80,7 +84,7 @@ export async function AboutUs() {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false }}
-            className="md:text-3xl text-xl tracking-widest font-bold text-zinc-300"
+            className="md:text-3xl 2xl:text-6xl text-xl tracking-widest font-bold text-zinc-300"
             style={{ textShadow: "8px 8px 10px #210342" }}
           >
             Who are we?
@@ -90,7 +94,7 @@ export async function AboutUs() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: false }}
             transition={{ delay: 0.1 }}
-            className="md:text-2xl text-sm md:mt-8 mt-4 mb-8"
+            className="md:text-2xl 2xl:text-4xl text-sm md:mt-8 mt-4 mb-8"
           >
             At Stride, we believe in the power of progress and the journey of
             growth. Our motto, "Elevate Your Business," reflects our commitment
