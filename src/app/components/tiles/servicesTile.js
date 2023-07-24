@@ -31,7 +31,7 @@ export function ServicesTile() {
           transition: {
             type: "spring",
             stiffness: 200,
-            damping: 10,
+            damping: 35,
           },
         },
         hidden: {
@@ -48,35 +48,35 @@ export function ServicesTile() {
           whileInView="visible"
           variants={div}
           viewport={{ once: false }}
-          className="mt-32 mb-32 mx-auto flex flex-wrap justify-center items-center grid md:grid-cols-3 divide-x grid-cols-1 "
+          className="mt-32 mb-32 mx-auto flex flex-wrap justify-center items-center grid md:grid-cols-3 md:divide-x grid-cols-1 "
         >
-          <Motion.MotionDiv className="logo text-white col-span-1 flex-wrap flex-col items-center h-full px-12">
+          <Motion.MotionDiv className="logo text-white col-span-1 flex-wrap flex-col items-center m-auto h-full px-12 md:my-0 my-8">
             <Motion.MotionDiv variants={item} onClick={handleServicesClick("logo")}>
-              <div className="flex text-8xl hover:cursor-pointer justify-center items-center flex-wrap">
+              <div className="flex text-8xl 2xl:text-9xl hover:cursor-pointer justify-center items-center flex-wrap">
                 <icons.CiApple />
               </div>
               <div className="text-center hover:cursor-pointer">
-                <p className="text-2xl">Logo and artwork</p>
+                <p className="md:text-2xl 2xl:text-4xl text-xl">Logo and artwork</p>
               </div>
             </Motion.MotionDiv>
           </Motion.MotionDiv>
-          <Motion.MotionDiv className="text-white col-span-1 flex-wrap flex-col items-center h-full px-12">
+          <Motion.MotionDiv className="text-white col-span-1 flex-wrap flex-col items-center h-full px-12 md:my-0 my-8">
             <Motion.MotionDiv variants={item}>
-              <div className="hover:cursor-pointer flex text-8xl justify-center items-center flex-wrap">
+              <div className="hover:cursor-pointer flex text-8xl 2xl:text-9xl justify-center items-center flex-wrap">
                 <icons.CiBarcode />
               </div>
               <div className="text-center hover:cursor-pointer">
-                <p className="text-2xl">Address j1g Services</p>
+                <p className="md:text-2xl 2xl:text-4xl text-xl">Address J1g Services</p>
               </div>
             </Motion.MotionDiv>
           </Motion.MotionDiv>
           <Motion.MotionDiv className="text-white col-span-1 flex-col items-center h-full px-12 z-50">
             <Motion.MotionDiv variants={item}>
-              <div className="hover:cursor-pointer flex text-8xl justify-center items-center flex-wrap">
+              <div className="hover:cursor-pointer flex text-8xl 2xl:text-9xl justify-center items-center flex-wrap">
                 <icons.CiMoneyBill />
               </div>
               <div className="text-center hover:cursor-pointer">
-                <p className="text-2xl">Cashout on your Sneakers</p>
+                <p className="md:text-2xl 2xl:text-4xl text-xl">Cashout Service</p>
               </div>
             </Motion.MotionDiv>
           </Motion.MotionDiv>
