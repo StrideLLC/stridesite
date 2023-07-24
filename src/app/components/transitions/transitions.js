@@ -3,7 +3,7 @@ import { MotionDiv } from "@/lib/motion";
 export const FadeInWhenVisible = {
         initial: "hidden",
         whileInView: "visible",
-        viewport: { once: false },
+        viewport: { once: true },
         transition:{ type: "spring", stiffness: 40, damping: 10},
         variants:{
           visible: { opacity: 1, y: 0 },

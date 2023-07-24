@@ -6,6 +6,9 @@ import Image from "next/image";
 import Link from "next/link";
 import AboutTileClient from "./aboutTile";
 import { Shoesvg } from "@/lib/shoesvg";
+import { ServicesTile } from "./servicesTile";
+
+import * as icons from "react-icons/ci";
 
 export async function logoImage() {
   return (
@@ -42,8 +45,8 @@ export async function WelcomeTileMobile() {
   return <StrideTextMobile />;
 }
 
-export async function WelcomeTileXL(){
-  return <XLStrideText />
+export async function WelcomeTileXL() {
+  return <XLStrideText />;
 }
 
 export async function WIP() {
@@ -104,10 +107,16 @@ export async function AboutUs() {
             to succeed in a dynamic marketplace.
           </Motion.P>
         </div>
-          <Motion.MotionDiv className="md:w-full md:h-full w-2/3 h-2/3 pt-4 md:pt-0 flex items-center md:ml-8 col-span-1 justify-center mx-auto">
-            <Shoesvg />
-          </Motion.MotionDiv>
+        <Motion.MotionDiv className="md:w-full md:h-full w-2/3 h-2/3 pt-4 md:pt-0 flex items-center md:ml-8 col-span-1 justify-center mx-auto">
+          <Shoesvg />
+        </Motion.MotionDiv>
       </div>
     </Motion.MotionDiv>
   );
+}
+
+export async function Services() {
+  return(
+    <ServicesTile />
+  )
 }

@@ -8,7 +8,7 @@ export default async function AboutTileClient() {
       initial={{ opacity: 0, y: -200 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ type: "spring", stiffness: 40, damping: 10, delay: 0.2 }}
-      viewport={{ once: false}}
+      viewport={{ once: true}}
       className="bg-purple-900/10 w-full h-full rounded-3xl py-8 md:px-40 2xl:py-16 px-8 justify-center items-center flex flex-wrap"
     >
       <div className="text-yellow-100/70 ">

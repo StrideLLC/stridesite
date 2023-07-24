@@ -29,6 +29,9 @@ const Home = () => {
               <div id='about' className="md:mt-80 mt-40 2xl:mt-[50rem] col-span-8 about">
                 <tiles.AboutUs />
               </div>
+              <div id='services' className="col-span-8 services">
+                <tiles.Services />
+              </div>
             </main>
           </div>
         </div>
