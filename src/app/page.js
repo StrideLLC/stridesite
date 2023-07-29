@@ -3,6 +3,8 @@ import * as tiles from "./components/tiles/tiles.js";
 import { scrollScript } from "@/lib/scrollscript.js";
 import BackToTop from "./components/buttons/backtotop.js";
 
+import Script from "next/script";
+
 const Home = () => {
 
   return (
@@ -39,7 +41,7 @@ const Home = () => {
           <tiles.NavBar />
         </div>
         <BackToTop />
-        <script {...scrollScript} />
+        <Script {...scrollScript} />
       </section>
     </>
   );
