@@ -48,7 +48,7 @@ export function ServicesTile() {
       const cashoutComponent = useRef(null);
 
       function handleServicesClick(ref) {
-          
+          console.log("test")
       } 
       return (
       <section>
@@ -60,7 +60,7 @@ export function ServicesTile() {
           className="mt-32 mb-32 mx-auto flex flex-wrap justify-center items-center grid md:grid-cols-3 md:divide-x grid-cols-1 "
         >
           <Motion.MotionDiv className="logo text-white col-span-1 flex-wrap flex-col items-center m-auto h-full px-12 md:my-0 my-8">
-            <Motion.MotionDiv variants={item} onClick={handleServicesClick(logoComponent)}>
+            <Motion.MotionDiv variants={item} onClick={() => handleServicesClick(logoComponent)}>
               <div className="flex text-8xl 2xl:text-9xl hover:cursor-pointer justify-center items-center flex-wrap">
                 <icons.CiApple />
               </div>
