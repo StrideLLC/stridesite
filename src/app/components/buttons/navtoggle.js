@@ -84,7 +84,7 @@ export const MenuToggle = ({ toggle }) => {
           transition={{ type: "spring", stiffness: 300, damping: 10 }}
         >
           <motion.button
-            className="z-20 absolute transform -translate-y-1/2 scale-[1.5] 2xl:scale-[3] mt-10 2xl:mt-28 2xl:mr-20 mr-10"
+            className="z-20 absolute transform -translate-y-1/2 scale-[1.5] 4k:scale-[3] mt-10 4k:mt-28 4k:mr-20 mr-6"
             onClick={toggleMenu}
           >
             <motion.svg
@@ -149,7 +149,7 @@ export const MenuToggle = ({ toggle }) => {
                     },
                   }}
                 >
-                  <ul className="text-5xl pl-4 font-bold tracking-wide md:mt-20 mt-8">
+                  <ul className="text-5xl pl-4 font-bold tracking-wide laptop:mt-20 mt-8">
                     {nav.map((item, index) => (
                       <motion.li
                         className="mt-16"

@@ -10,7 +10,7 @@ export async function StrideText() {
     <MotionDiv {...transitions.FadeInWhenVisible}>
       <MotionDiv
         {...transitions.GlowFadeIn}
-        className="bg-purple-900/10 w-full h-full rounded-xl py-10 hidden 2xl:hidden md:flex flex-wrap justify-center items-center"
+        className="bg-purple-900/10 w-full h-full rounded-xl py-10 hidden 4k:hidden laptop:flex flex-wrap justify-center items-center"
       >
         <div className="">
           <div className="Stride-Logo flex justify-center items-center">
@@ -94,7 +94,7 @@ export function StrideTextMobile() {
     <MotionDiv className="" {...transitions.FadeInWhenVisible}>
       <MotionDiv
         {...transitions.GlowFadeIn}
-        className="md:hidden bg-purple-900/10 w-full h-full rounded-xl py-10 flex flex-wrap justify-center items-center mt-16"
+        className="laptop:hidden bg-purple-900/10 w-full h-full rounded-xl py-10 flex flex-wrap justify-center items-center mt-16"
         >
           <div className="Stride-Logo flex justify-center items-center">
             <Phrase
@@ -125,7 +125,7 @@ export async function XLStrideText() {
     <MotionDiv {...transitions.FadeInWhenVisible}>
       <MotionDiv
         {...transitions.GlowFadeIn}
-        className="bg-purple-900/10 w-full h-full rounded-xl py-10 hidden 2xl:flex flex-wrap justify-center items-center"
+        className="bg-purple-900/10 w-full h-full rounded-xl py-10 hidden 4k:flex flex-wrap justify-center items-center"
       >
         <div className="">
           <div className="Stride-Logo flex justify-center items-center">
