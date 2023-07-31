@@ -2,6 +2,8 @@
 import { useState } from "react";
 import { motion, LayoutGroup, AnimatePresence } from "framer-motion";
 
+import Link from "next/link";
+
 const Path = (props) => (
   <motion.path
     fill="transparent"
@@ -68,8 +70,9 @@ export const MenuToggle = ({ toggle }) => {
       link: "#tools",
     },
     {
-      name: "Discord",
-      link: "#discord",
+      name: "Discord ↗",
+      link: "https://discord.gg/stridellc",
+      target: "_blank",
     }
   ];
 
@@ -174,12 +177,13 @@ export const MenuToggle = ({ toggle }) => {
                           },
                         }}
                       >
-                        <a
+                        <Link
                           href={item.link}
+                          {...(item.target && { target: item.target })}
                           className="text-white hover:text-purple-500"
                         >
                           {item.name}
-                        </a>
+                        </Link>
                       </motion.li>
                     ))}
                   </ul>

@@ -6,7 +6,7 @@ import { AnimatePresence } from "framer-motion";
 
 import { useState } from "react";
 
-export function ServicesTile() {
+export default function ToolsTile() {
   const variants = {
     open: { opacity: 1},
     closed: { opacity: 0},
@@ -70,15 +70,15 @@ export function ServicesTile() {
   }
 
   return (
-    <section>
+    <section className="">
       <Motion.MotionDiv 
         initial="hidden"
         whileInView="visible"
         variants={div}
         viewport={{ once: false }}
-        className="flex flex-wrap justify-center items-center w-full">
+      className="flex flex-wrap justify-center items-center w-full">
         <div className="text-white text-4xl font-bold tracking-wide mb-12 rounded-lg bg-purple-900/50 px-4 py-2">
-          <p>Services</p>
+          <p>Tools</p>
         </div>
       </Motion.MotionDiv>
       <Motion.MotionDiv
@@ -94,11 +94,11 @@ export function ServicesTile() {
             onClick={() => handleServicesClick("logo")}
           >
             <div className="flex text-8xl 4k:text-9xl hover:cursor-pointer justify-center items-center flex-wrap">
-              <icons.CiImageOn />
+              <icons.CiSearch />
             </div>
             <div className="text-center hover:cursor-pointer">
               <p className="xl:text-4k 4k:text-4xl text-xl">
-                Logos and Artwork
+                StockX Search
               </p>
             </div>
           </Motion.MotionDiv>
@@ -109,11 +109,11 @@ export function ServicesTile() {
             onClick={() => handleServicesClick("address")}
           >
             <div className="hover:cursor-pointer flex text-8xl 4k:text-9xl justify-center items-center flex-wrap">
-              <icons.CiLocationOn />
+              <icons.CiCalculator2 />
             </div>
             <div className="text-center hover:cursor-pointer">
               <p className="laptop:text-4k 4k:text-4xl text-xl">
-                Premium Address J1gs
+                Payout Calculator
               </p>
             </div>
           </Motion.MotionDiv>
@@ -124,18 +124,18 @@ export function ServicesTile() {
             onClick={() => handleServicesClick("cashout")}
           >
             <div className="hover:cursor-pointer flex text-8xl 4k:text-9xl justify-center items-center flex-wrap">
-              <icons.CiBadgeDollar />
+              <icons.CiViewTimeline />
             </div>
             <div className="text-center hover:cursor-pointer">
               <p className="laptop:text-4k 4k:text-4xl text-xl">
-                Cashout Service
+                Botting Profiles Generator
               </p>
             </div>
           </Motion.MotionDiv>
         </Motion.MotionDiv>
       </Motion.MotionDiv>
       <AnimatePresence>
-        <div className="absolute left-20 right-20 mx-auto">
+        <div className="absolute left-0 right-0 mx-auto">
           <Motion.MotionDiv
             className="laptop:block hidden flex flex-wrap justify-center items-center logodesc bg-purple-900/50 rounded-lg w-full text-white px-8 text-2xl font-medium leading-light py-4"
             key="logo"
@@ -143,10 +143,10 @@ export function ServicesTile() {
             initial="closed"
             variants={variants}
           >
-            <p>At Stride, we understand the significance of a strong brand identity. That's why we offer logo and artwork creation services curated by hand-picked artists. Whether you're a startup looking for a unique logo or an established business seeking to refresh your brand, our talented artists will bring your vision to life with creativity and precision.</p>
+            <p>Uncover vital data instantly! Our user-friendly StockX Searching Tool retrieves all listings, displaying lowest ask, bid, and last sale info for each size. Stay informed, optimize pricing, and elevate your reselling success! Try it now!</p>
           </Motion.MotionDiv>
         </div>
-        <div className="absolute left-20 right-20 mx-auto">
+        <div className="absolute left-0 right-0 mx-auto">
           <Motion.MotionDiv
             key="address"
             className="laptop:block hidden flex flex-wrap justify-center items-center logodesc bg-purple-900/50 rounded-lg w-full text-white px-8 text-2xl font-medium leading-light py-4"
@@ -154,10 +154,10 @@ export function ServicesTile() {
             initial="closed"
             variants={variants}
           >
-            <p>Address J1gs are customized versions of your real address designed to fool websites like Nike. By using these modified addresses, you can maintain your privacy while appearing as if you have different addresses for each transaction. At Stride, we meticulously craft and verify these J1gs, ensuring secure and confident interactions for your business. Stay ahead in the digital world with our innovative and secure solutions.</p>
+            <p>Maximize your profits with our Payout Calculator! Simply input the shoe's value, and instantly discover the potential payouts on various reselling platforms like StockX, eBay, and more. Unleash the power of data-driven decisions to optimize your reselling strategy. Start calculating your earnings now!</p>
           </Motion.MotionDiv>
         </div>
-        <div className="absolute left-20 right-20 mx-auto">
+        <div className="absolute left-0 right-0 mx-auto">
           <Motion.MotionDiv
             key="cashout"
             className="laptop:block hidden flex flex-wrap justify-center items-center logodesc bg-purple-900/50 rounded-lg w-full text-white px-8 text-2xl font-medium leading-light py-4"
@@ -165,7 +165,7 @@ export function ServicesTile() {
             initial="closed"
             variants={variants}
           >
-            <p>Looking to offload your shoe inventory quickly and efficiently? Stride's Sneaker Cashout Service is here to help. We buy all types of shoes, providing you with a hassle-free solution to free up space and capitalize on new opportunities.</p>
+            <p>Streamline your sneaker botting experience with our cutting-edge Profile Converter! Effortlessly transform your viewable CSV files into bot-ready .json profiles and vice versa. Seamlessly enter and use your profiles in the bot of your choice. Make adjustments on-the-fly within the bot and convert back to CSV effortlessly.</p>
           </Motion.MotionDiv>
         </div>
       </AnimatePresence>
