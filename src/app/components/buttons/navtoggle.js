@@ -125,7 +125,7 @@ export const MenuToggle = ({ toggle }) => {
             <AnimatePresence>
               {isOpen && (
                 <motion.div
-                  className="bg-[#1b032d] flex px-4 w-full py-8 h-full rounded-xl absolute"
+                  className="bg-[#1b032d] flex px-4 w-full py-8 h-full laptop:rounded-xl absolute"
                   initial="initial"
                   animate="animate"
                   exit="exit"

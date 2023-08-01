@@ -11,10 +11,10 @@ const Home = () => {
       <section className="first-section relative">
         <div className="App flex flex-row h-full">
           <div className="flex flex-col w-full">
-            <div id="top" className="pl-8 pt-8">
+            <div id="top" className="pl-8 laptop:pt-6 pt-4">
               <tiles.logoImage />
             </div>
-            <main className="4k:bg-purple-950/10 flex-grow w-full 4k:max-w-[2000px] max-w-[1400px] laptop:gap-y-5 gap-y-1 gap-x-5 grid grid-cols-8 py-6 mx-auto -mt-20">
+            <main className="4k:bg-purplew-950/10 flex-grow w-full 4k:max--[2000px] max-w-[1400px] laptop:gap-y-5 gap-y-1 gap-x-5 grid grid-cols-8 py-6 mx-auto -mt-20">
               <div className="ghost col-span-0 laptop:col-span-2"></div>
               <div className="col-span-6 4k:mt-20 laptop:col-span-4">
                 <tiles.welcomeTile />
@@ -41,15 +41,15 @@ const Home = () => {
                 <tiles.Tools />
               </div>
             </main>
+            <div className="footer w-full z-30">
+              <tiles.Footer />
+            </div>
           </div>
         </div>
-
         <div className="fixed right-0 top-0 h-full laptop:w-80 w-screen z-0 navContainer">
           <tiles.NavBar />
         </div>
-        <div className="w-full">
-            <tiles.Footer />
-        </div>
+
         <BackToTop />
         <Script {...scrollScript} />
       </section>

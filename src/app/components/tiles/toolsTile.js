@@ -118,7 +118,7 @@ export default function ToolsTile() {
             </div>
           </Motion.MotionDiv>
         </Motion.MotionDiv>
-        <Motion.MotionDiv className="text-white col-span-1 flex-col items-center h-full px-12 z-50">
+        <Motion.MotionDiv className="text-white col-span-1 flex-col items-center h-full laptop:z-10 ">
           <Motion.MotionDiv
             variants={item}
             onClick={() => handleServicesClick("cashout")}

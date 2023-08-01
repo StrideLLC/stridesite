@@ -7,7 +7,7 @@ import * as transitions from "../transitions/transitions";
 export async function ImageTile() {
     return (
       <Motion.MotionDiv
-        className="laptop:w-[100px] h-[100px] w-[75px] h-[75px] laptop:ml-0 -ml-4 z-60"
+        className="laptop:w-[100px] laptop:h-[100px] w-[75px] h-[75px] relative laptop:ml-0 -ml-4 z-60"
         {...transitions.HoverScaleRotate}
         initial={{ opacity: 0, x: -100, rotate: -40 }}
         whileInView={{ opacity: 1, x: 0, rotate: 0 }}
@@ -18,8 +18,7 @@ export async function ImageTile() {
           <Image
             src="/stridelogo123.png"
             alt="Stride Logo"
-            width={100}
-            height={100}
+            fill
             className="opacity-50 4k:scale-[1.5] 4k:mt-8 4k:ml-8"
           />
         </Link>
