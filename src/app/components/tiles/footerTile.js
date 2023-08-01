@@ -101,7 +101,7 @@ export default function FooterTile() {
             </p>
           </div>
           <div className="space-y-2 text-sm laptop:text-base text-white/70 flex flex-col laptop:text-left">
-            <Link href="mailto:contact@stride.llc" target="_blank">
+            <Link href="https://www.instagram.com/stridesneaks/" target="_blank">
               Instagram ↗
             </Link>
           </div>
