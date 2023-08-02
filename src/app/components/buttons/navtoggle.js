@@ -176,7 +176,7 @@ export const MenuToggle = ({ toggle }) => {
                           transform: "scale(0.5)",
                         },
                       }}>
-                      <p className="hover:cursor-pointer text-purple-100 hover:text-purple-500">
+                      <p className="hover:cursor-pointer text-purple-200 hover:text-purple-500">
                         Sign In
                       </p>
                     </motion.li>
