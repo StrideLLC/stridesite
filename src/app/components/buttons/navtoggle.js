@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { motion, LayoutGroup, AnimatePresence } from "framer-motion";
 
+import { signIn, signOut } from "next-auth/react";
 import Link from "next/link";
 
 const Path = (props) => (
@@ -153,6 +154,32 @@ export const MenuToggle = ({ toggle }) => {
                   }}
                 >
                   <ul className="text-5xl pl-4 font-bold tracking-wide laptop:mt-20 mt-8">
+                    <motion.li
+                      classname="mt-16"
+                      key={"signIn"}
+                      onClick={signIn}
+                      variants={{
+                        initial: {
+                          opacity: 0,
+                          filter: "blur(10px)",
+                          transform: "scale(0.5)",
+                        },
+                        animate: {
+                          opacity: 1,
+                          filter: "blur(0px)",
+                          transform: "scale(1)",
+                          transition: { delay: 0.1 * 0 },
+                        },
+                        exit: {
+                          filter: "blur(10px)",
+                          opacity: 0,
+                          transform: "scale(0.5)",
+                        },
+                      }}>
+                      <p className="hover:cursor-pointer text-purple-100 hover:text-purple-500">
+                        Sign In
+                      </p>
+                    </motion.li>
                     {nav.map((item, index) => (
                       <motion.li
                         className="mt-16"
