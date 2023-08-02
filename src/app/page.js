@@ -14,7 +14,7 @@ const Home = () => {
             <div id="top" className="pl-8 laptop:pt-6 pt-4">
               <tiles.logoImage />
             </div>
-            <main className="4k:bg-purplew-950/10 flex-grow w-full 4k:max--[2000px] max-w-[1400px] laptop:gap-y-5 gap-y-1 gap-x-5 grid grid-cols-8 py-6 mx-auto -mt-20">
+            <main className="4k:bg-purple-950/10 flex-grow w-full 4k:max-w-[2000px] max-w-[1400px] laptop:gap-y-5 gap-y-1 gap-x-5 grid grid-cols-8 py-6 mx-auto -mt-20">
               <div className="ghost col-span-0 laptop:col-span-2"></div>
               <div className="col-span-6 4k:mt-20 laptop:col-span-4">
                 <tiles.welcomeTile />
@@ -29,7 +29,7 @@ const Home = () => {
               <div className="ghost col-span-1"></div>
               <div
                 id="about"
-                className="laptop:mt-80 mt-40 4k:mt-[50rem] col-span-8 about"
+                className="laptop:mt-80 mt-40 4k:mt-96 col-span-8 about"
               >
                 <tiles.AboutUs />
               </div>
