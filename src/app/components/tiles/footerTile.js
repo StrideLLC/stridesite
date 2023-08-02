@@ -55,7 +55,7 @@ export default function FooterTile() {
         >
           <Link href="https://discord.gg/stridellc" target="_blank">
             <button className="p-2 bg-indigo-600 rounded-xl whitespace-nowrap ">
-              Discord ↗
+              Discord »
             </button>
           </Link>
         </Motion.MotionDiv>
