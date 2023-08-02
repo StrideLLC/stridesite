@@ -70,7 +70,7 @@ export const MenuToggle = ({ toggle }) => {
       link: "#tools",
     },
     {
-      name: "Discord ↗",
+      name: "Discord »",
       link: "https://discord.gg/stridellc",
       target: "_blank",
     }

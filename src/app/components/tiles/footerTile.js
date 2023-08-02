@@ -87,10 +87,10 @@ export default function FooterTile() {
           </div>
           <div className="space-y-2 text-sm laptop:text-base text-white/70 flex flex-col">
             <Link href="mailto:contact@stride.llc" target="_blank">
-              Email ↗
+              Email
             </Link>
             <Link href="https://discord.gg/stridellc" target="_blank">
-              Discord ↗
+              Discord
             </Link>
           </div>
         </div>
@@ -102,7 +102,7 @@ export default function FooterTile() {
           </div>
           <div className="space-y-2 text-sm laptop:text-base text-white/70 flex flex-col laptop:text-left">
             <Link href="https://www.instagram.com/stridesneaks/" target="_blank">
-              Instagram ↗
+              Instagram
             </Link>
           </div>
         </div>
