@@ -157,7 +157,7 @@ export const MenuToggle = ({ toggle }) => {
                     <motion.li
                       classname="mt-16"
                       key={"signIn"}
-                      onClick={signIn}
+                      onClick={() => signIn("discord")}
                       variants={{
                         initial: {
                           opacity: 0,
