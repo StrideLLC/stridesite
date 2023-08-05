@@ -7,8 +7,6 @@ import AboutTile from "./aboutTile";
 import ToolsTile from "./toolsTile";
 import FooterTile from "./footerTile"
 
-import * as icons from "react-icons/ci";
-
 export async function logoImage() {
   return <ImageTile />;
 }

@@ -135,7 +135,7 @@ export default function ToolsTile() {
         </Motion.MotionDiv>
       </Motion.MotionDiv>
       <AnimatePresence>
-        <div className="absolute left-0 right-0 mx-auto">
+        <div className="absolute left-20 right-20 mx-auto">
           <Motion.MotionDiv
             className="laptop:block hidden flex flex-wrap justify-center items-center logodesc bg-purple-900/50 rounded-lg w-full text-white px-8 text-2xl font-medium leading-light py-4"
             key="logo"
@@ -146,7 +146,7 @@ export default function ToolsTile() {
             <p>Uncover vital data instantly! Our user-friendly StockX Searching Tool retrieves all listings, displaying lowest ask, bid, and last sale info for each size. Stay informed, optimize pricing, and elevate your reselling success! Try it now!</p>
           </Motion.MotionDiv>
         </div>
-        <div className="absolute left-0 right-0 mx-auto">
+        <div className="absolute left-20 right-20 mx-auto">
           <Motion.MotionDiv
             key="address"
             className="laptop:block hidden flex flex-wrap justify-center items-center logodesc bg-purple-900/50 rounded-lg w-full text-white px-8 text-2xl font-medium leading-light py-4"
@@ -157,7 +157,7 @@ export default function ToolsTile() {
             <p>Maximize your profits with our Payout Calculator! Simply input the shoe's value, and instantly discover the potential payouts on various reselling platforms like StockX, eBay, and more. Unleash the power of data-driven decisions to optimize your reselling strategy. Start calculating your earnings now!</p>
           </Motion.MotionDiv>
         </div>
-        <div className="absolute left-0 right-0 mx-auto">
+        <div className="absolute left-20 right-20 mx-auto">
           <Motion.MotionDiv
             key="cashout"
             className="laptop:block hidden flex flex-wrap justify-center items-center logodesc bg-purple-900/50 rounded-lg w-full text-white px-8 text-2xl font-medium leading-light py-4"
