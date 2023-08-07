@@ -2,7 +2,6 @@ import DiscordProvider from 'next-auth/providers/discord'
 
 const scopes = ['identify']
 export const authOptions = {
-    
         providers: [
           DiscordProvider({
               clientId: process.env.DISCORD_CLIENT_ID,
