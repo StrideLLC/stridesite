@@ -5,7 +5,7 @@ import { DashData } from "@/lib/mongo/dashRoleData";
 
 import Link from "next/link";
 
-import Default from "../components/dashboard/default";
+import Default from "../../components/dashboard/default";
 
 const Home = async () => {
   const znadata = await ZnaData();
