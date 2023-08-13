@@ -143,7 +143,7 @@ export function ServicesTile() {
             initial="closed"
             variants={variants}
           >
-            <p>At Stride, we understand the significance of a strong brand identity. That's why we offer logo and artwork creation services curated by hand-picked artists. Whether you're a startup looking for a unique logo or an established business seeking to refresh your brand, our talented artists will bring your vision to life with creativity and precision.</p>
+            <p className="xl:text-4k 4k:text-4xl text-xl" >At Stride, we understand the significance of a strong brand identity. That's why we offer logo and artwork creation services curated by hand-picked artists. Whether you're a startup looking for a unique logo or an established business seeking to refresh your brand, our talented artists will bring your vision to life with creativity and precision.</p>
           </Motion.MotionDiv>
         </div>
         <div className="absolute left-20 right-20 mx-auto">
@@ -154,7 +154,7 @@ export function ServicesTile() {
             initial="closed"
             variants={variants}
           >
-            <p>Address J1gs are customized versions of your real address designed to fool websites like Nike. By using these modified addresses, you can maintain your privacy while appearing as if you have different addresses for each transaction. At Stride, we meticulously craft and verify these J1gs, ensuring secure and confident interactions for your business. Stay ahead in the digital world with our innovative and secure solutions.</p>
+            <p className="xl:text-4k 4k:text-4xl text-xl">Address J1gs are customized versions of your real address designed to fool websites like Nike. By using these modified addresses, you can maintain your privacy while appearing as if you have different addresses for each transaction. At Stride, we meticulously craft and verify these J1gs, ensuring secure and confident interactions for your business. Stay ahead in the digital world with our solutions.</p>
           </Motion.MotionDiv>
         </div>
         <div className="absolute left-20 right-20 mx-auto">
@@ -165,7 +165,7 @@ export function ServicesTile() {
             initial="closed"
             variants={variants}
           >
-            <p>Looking to offload your shoe inventory quickly and efficiently? Stride's Sneaker Cashout Service is here to help. We buy all types of shoes, providing you with a hassle-free solution to free up space and capitalize on new opportunities.</p>
+            <p className="xl:text-4k 4k:text-4xl text-xl">Looking to offload your shoe inventory quickly and efficiently? Stride's Sneaker Cashout Service is here to help. We buy all types of shoes, providing you with a hassle-free solution to free up space and capitalize on new opportunities.</p>
           </Motion.MotionDiv>
         </div>
       </AnimatePresence>
