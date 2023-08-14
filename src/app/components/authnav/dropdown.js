@@ -7,6 +7,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { signOut } from "next-auth/react";
 
+import { usePathname } from "next/navigation";
+
 const Path = (props) => (
   <motion.path
     fill="transparent"
@@ -18,6 +20,9 @@ const Path = (props) => (
 );
 
 export const Dropdown = (user) => {
+  const pathname = usePathname();
+  console.log(pathname)
+  let isDashboard = pathname.startsWith("/dashboard") ? true : false;
 
   const initialVariants = {
     hidden: {
@@ -115,7 +120,7 @@ export const Dropdown = (user) => {
                   className="laptop:bg-slate-800/50 bg-slate-900 py-2 laptop:px-4 px-2 rounded-xl"
                   variants={itemVariants}
                 >
-                  <Link href="/dashboard">Dashboard</Link>
+                  <Link href={isDashboard ? "/": "/dashboard" } replace>{`${isDashboard ? "Home": "Dashboard"}`}</Link>
                 </motion.li>
                 <motion.li
                   className="laptop:bg-slate-800/50 bg-slate-900 py-2 px-4 rounded-xl mt-1"

@@ -1,10 +1,8 @@
 import Link from "next/link";
 
-
-
 export default function DashNav(){
     return(
-        <div className="flex w-screen text-2xl text-white/50 font-bold mx-auto text-center justify-center gap-x-4">
+        <div className="flex w-full text-2xl text-white/50 font-bold gap-x-4">
             <div>
                 <Link href="/dashboard">Home</Link>
             </div>
