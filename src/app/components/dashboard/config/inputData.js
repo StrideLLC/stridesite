@@ -1,7 +1,8 @@
 
 export const Input = () => {
     return (
-        <div>
+        <div className="">
+            penis
         </div>
     )
 

@@ -21,7 +21,6 @@ const Path = (props) => (
 
 export const Dropdown = (user) => {
   const pathname = usePathname();
-  console.log(pathname)
   let isDashboard = pathname.startsWith("/dashboard") ? true : false;
 
   const initialVariants = {

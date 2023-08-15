@@ -5,7 +5,9 @@ const Home = async () => {
   return (
     <>
       <Certify>
-        <Default />
+        <div className="fixed w-screen">
+          <Default />
+        </div>
       </Certify>
     </>
   );
