@@ -6,7 +6,7 @@ const Home = async () => {
   return (
     <>
       <Certify>
-        <div className="fixed w-screen">
+        <div className="w-screen">
           <Default />
         </div>
           <Input />

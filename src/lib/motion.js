@@ -15,3 +15,5 @@ export const Path = motion.path;
 export const Layout = LayoutGroup;
 
 export const Animate = AnimatePresence;
+
+export const Span = motion.span;

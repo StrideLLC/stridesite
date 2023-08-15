@@ -82,7 +82,7 @@ export const Dropdown = (user) => {
   };
 
   return (
-    <motion.div initial="hidden" whileInView="visible" viewport={{once: true}} variants={initialVariants} className="text-white flex flex-col laptop:p-4 p-2 laptop:mr-8 mr-4">
+    <motion.div className="text-white flex flex-col laptop:p-4 p-2 laptop:mr-8 mr-4">
       <div className="flex items-center w-full p-4 bg-slate-800/50 rounded-xl ">
         <div className="relative laptop:w-10 laptop:h-10 w-8 h-8 mr-2 ">
           <Image src={user?.user?.image} fill className="rounded-full" />
