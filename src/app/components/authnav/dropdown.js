@@ -7,6 +7,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { signOut } from "next-auth/react";
 
+import { usePathname } from "next/navigation";
+
 const Path = (props) => (
   <motion.path
     fill="transparent"
@@ -18,6 +20,8 @@ const Path = (props) => (
 );
 
 export const Dropdown = (user) => {
+  const pathname = usePathname();
+  let isDashboard = pathname.startsWith("/dashboard") ? true : false;
 
   const initialVariants = {
     hidden: {
@@ -78,7 +82,7 @@ export const Dropdown = (user) => {
   };
 
   return (
-    <motion.div initial="hidden" whileInView="visible" viewport={{once: true}} variants={initialVariants} className="text-white flex flex-col laptop:p-4 p-2 laptop:mr-8 mr-4">
+    <motion.div className="text-white flex flex-col laptop:p-4 p-2 laptop:mr-8 mr-4">
       <div className="flex items-center w-full p-4 bg-slate-800/50 rounded-xl ">
         <div className="relative laptop:w-10 laptop:h-10 w-8 h-8 mr-2 ">
           <Image src={user?.user?.image} fill className="rounded-full" />
@@ -115,7 +119,7 @@ export const Dropdown = (user) => {
                   className="laptop:bg-slate-800/50 bg-slate-900 py-2 laptop:px-4 px-2 rounded-xl"
                   variants={itemVariants}
                 >
-                  <Link href="/dashboard">Dashboard</Link>
+                  <Link href={isDashboard ? "/": "/dashboard" } replace>{`${isDashboard ? "Home": "Dashboard"}`}</Link>
                 </motion.li>
                 <motion.li
                   className="laptop:bg-slate-800/50 bg-slate-900 py-2 px-4 rounded-xl mt-1"

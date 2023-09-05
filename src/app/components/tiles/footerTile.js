@@ -40,7 +40,7 @@ export default function FooterTile() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false }}
-        className="absolute 4k:w-5/12 laptop:w-7/12 w-10/12 laptop:-mt-20 -mt-12 bg-gradient-to-br rounded-lg from-violet-500/80 via-purple-700/80 to-purple-950/80 flex laptop:px-16 laptop:py-12 px-6 py-4"
+        className="absolute 4k:w-5/12 laptop:w-7/12 w-10/12 laptop:-mt-20 -mt-12 bg-gradient-to-br rounded-lg from-violet-500/90 via-purple-700/90 to-purple-950/90 flex laptop:px-16 laptop:py-12 px-6 py-4"
       >
         <div className="flex-col mr-auto my-auto text-white laptop:text-3xl text-lg font-bold">
           <p>Join our Community.</p>

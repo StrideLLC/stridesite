@@ -143,7 +143,7 @@ export default function ToolsTile() {
             initial="closed"
             variants={variants}
           >
-            <p>Uncover vital data instantly! Our user-friendly StockX Searching Tool retrieves all listings, displaying lowest ask, bid, and last sale info for each size. Stay informed, optimize pricing, and elevate your reselling success! Try it now!</p>
+            <p className="xl:text-4k 4k:text-4xl text-xl">Uncover vital data instantly! Our user-friendly StockX Searching Tool retrieves all listings, displaying lowest ask, bid, and last sale info for each size. Stay informed, optimize pricing, and elevate your reselling success! Try it now!</p>
           </Motion.MotionDiv>
         </div>
         <div className="absolute left-20 right-20 mx-auto">
@@ -154,7 +154,7 @@ export default function ToolsTile() {
             initial="closed"
             variants={variants}
           >
-            <p>Maximize your profits with our Payout Calculator! Simply input the shoe's value, and instantly discover the potential payouts on various reselling platforms like StockX, eBay, and more. Unleash the power of data-driven decisions to optimize your reselling strategy. Start calculating your earnings now!</p>
+            <p className="xl:text-4k 4k:text-4xl text-xl">Maximize your profits with our Payout Calculator! Simply input the shoe's value, and instantly discover the potential payouts on various reselling platforms like StockX, eBay, and more. Unleash the power of data-driven decisions to optimize your reselling strategy. Start calculating your earnings now!</p>
           </Motion.MotionDiv>
         </div>
         <div className="absolute left-20 right-20 mx-auto">
@@ -165,7 +165,7 @@ export default function ToolsTile() {
             initial="closed"
             variants={variants}
           >
-            <p>Streamline your sneaker botting experience with our cutting-edge Profile Converter! Effortlessly transform your viewable CSV files into bot-ready .json profiles and vice versa. Seamlessly enter and use your profiles in the bot of your choice. Make adjustments on-the-fly within the bot and convert back to CSV effortlessly.</p>
+            <p className="xl:text-4k 4k:text-4xl text-xl">Streamline your sneaker botting experience with our cutting-edge Profile Converter! Effortlessly transform your viewable CSV files into bot-ready .json profiles and vice versa. Seamlessly enter and use your profiles in the bot of your choice. Make adjustments on-the-fly within the bot and convert back to CSV effortlessly.</p>
           </Motion.MotionDiv>
         </div>
       </AnimatePresence>
